@@ -1,0 +1,198 @@
+// 背景颜色 + 边框颜色
+@theme-color: #1CC09F;  //主題顔色
+@asside-bgColor: #283643;   //左侧栏背景颜色
+@btn-bgColor-green: #1CC09F;  //按钮背景绿颜色
+@btn-bdColor-green: #0FB190;  //按钮边框绿颜色
+@btn-bgColor-red: #D9534F;  //按钮背景红颜色
+@btn-bdColor-red: #D43F3A;  //按钮边框红颜色
+@popup-bgColor: #F3F3F3;  //弹窗背景颜色
+@bdColor-grey: #ECECEC;  //边框颜色
+@bdColor-grey-s: #CCC;  //边框颜色
+@bdColor-grey-ss: #DDD;  //边框颜色
+
+
+// 字体大小
+@fontsize-small: 12px;
+@fontsize-small-s: 13px;
+@fontsize-middle: 14px;
+@fontsize-large: 16px;
+@fontsize-large-x: 18px;
+@fontsize-large-xx: 20px;
+@fontsize-large-xxx: 24px;
+@fontsize-large-xxxx: 28px;
+
+
+// 字体颜色
+@color-white: #fff;  //字体颜色
+@color-whiteFC: #ffffffcc;   // 不是太白的颜色
+@color-dark-grey: #333333;  //字体颜色
+@color-grey: #B1B3B3;  //字体颜色
+@color-grey-s: #808080;  //字体颜色
+@color-green: #00E426;  //字体颜色
+@color-green-s: #1CC09F; // 字体颜色
+@color-red: #E60000;  // 字体颜色
+@color-red-s: #FF0000;  // *颜色
+@color-blue: #0080EE;  //链接颜色-1
+@color-blue-s: #0072F2;  //链接颜色-2
+
+
+
+body {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+li, ul, p, div, body, html, table {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+li {
+    list-style: none;
+}
+
+// 清除浮动
+.clearfix:after{
+  content: "";
+  display: block;
+  height: 0;
+  clear:both;
+  visibility: hidden;
+}
+.clearfix{
+  *zoom: 1;
+}
+
+.input-wrap {
+  .ivu-input,
+  .ivu-input-wrapper,
+  .ivu-select-single .ivu-select-selection,
+  .ivu-date-picker {
+    height: 36px;
+    // line-height: 36px;
+    border-color: @bdColor-grey-s;
+    font-size: @fontsize-small-s;
+  }
+  .ivu-select-selected-value,
+  .ivu-select-placeholder {
+    font-size: @fontsize-small-s!important;
+    height: 36px !important;
+    // line-height: 36px !important;
+  }
+
+  .ivu-input-icon {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+// 表格样式
+.ivu-table {
+    font-size: @fontsize-small-s  !important;
+}
+
+.ivu-form-item-label{
+    font-weight:bold;
+}
+
+.ivu-select-item {
+    padding: 7px 16px;
+    font-size: @fontsize-small-s  !important;
+}
+
+.ivu-table-header thead tr th {
+    padding: 14px 0!important;
+}
+
+// 复选框的样式
+.ivu-checkbox-checked .ivu-checkbox-inner {
+    border-color: @btn-bdColor-green  !important;
+    background: @btn-bgColor-green  !important;
+}
+
+// 弹窗的样式
+/deep/.ivu-modal-wrap {
+    // top: 50%;
+    // transform: translateY(-50%);
+  
+    // .ivu-modal {
+    //   top: 0;
+    // }
+  
+    .ivu-modal-content {
+      border-radius: 2px !important;
+      background: rgba(255, 255, 255, 1) !important;
+      box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2) !important;
+  
+      .ivu-modal-header p {
+        font-size: @fontsize-large  !important;
+        color: @color-dark-grey  !important;
+      }
+  
+      .ivu-modal-body {
+        padding: 20px 44px 50px;
+        max-height: 450px;
+        overflow: auto;
+      }
+  
+      .ivu-form-item-label {
+        font-size: @fontsize-small-s  !important;
+        font-weight: bold !important;
+      }
+  
+    .ivu-input,
+    .ivu-select-input,
+    .ivu-input-wrapper,
+    .ivu-select-single,
+    .ivu-select-selection {
+    height: 36px;
+    // line-height: 36px;
+    border-color: @bdColor-grey-s;
+    font-size: @fontsize-small-s;
+    }
+  
+    .ivu-select-selected-value,
+    .ivu-select-placeholder {
+      font-size: @fontsize-small-s  !important;
+      height: 36px;
+      // line-height: 36px;
+    }
+
+    .ivu-select-item {
+      padding: 7px 16px;
+      font-size: @fontsize-small-s  !important;
+    }
+  
+    .footer {
+        text-align: center;
+
+        .saveBtn {
+          margin-right: 40px;
+        }
+      }
+    }
+  
+    .error {
+      font-size: @fontsize-small;
+      color: #e73c3b;
+      line-height: 24px; 
+    }
+  }
+.ivu-modal-content {
+  border-radius: 2px !important;
+  background: rgba(255, 255, 255, 1) !important;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2) !important;
+
+  .ivu-modal-header p {
+    font-size: @fontsize-large  !important;
+    color: @color-dark-grey  !important;
+  }
+}
